@@ -65,6 +65,6 @@ La impresión en pantalla de las operaciones no sigue un orden determiístico, y
 Sin embargo, al finalizar todas las operaciones, se imprimen el valor minimo de la pila y el contenido final de la misma para verificar que el estado de la misma no posee inconsistencias, producto de la concurrencia.
 
 ## Complejidad 0(1)
-La pila esta implementada sobre un slice de enteros, de manera que las operaciones `push` y `pop` no presentan dificultades para implementarse con tiempo de ejecusión constante, ya que se implementan como accesos al directos al indice tope de la pila.
+La pila esta implementada sobre un slice de enteros, de manera que las operaciones `push` y `pop` no presentan dificultades para relizarse en tiempo de ejecusión constante, ya que se implementan como accesos directos al indice tope de la pila.
 
 Por otra parte, la operación que presenta problemas en la obtención del resultado en complejidad O(1) es `peekMin`, ya que para lograrlo, no es posible iterar la misma y comparar los valores. La solución propuesta, se sirve del uso de una pila de apoyo, donde se apilan los mínimos sucesivos.
