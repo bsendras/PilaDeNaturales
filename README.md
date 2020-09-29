@@ -67,4 +67,4 @@ Sin embargo, al finalizar todas las operaciones, se imprimen el valor minimo de 
 ## Complejidad 0(1)
 La pila esta implementada sobre un slice de enteros, de manera que las operaciones `push` y `pop` no presentan dificultades para relizarse en tiempo de ejecusión constante, ya que se implementan como accesos directos al indice tope de la pila.
 
-Por otra parte, la operación que presenta problemas en la obtención del resultado en complejidad O(1) es `peekMin`, ya que para lograrlo, no es posible iterar la misma y comparar los valores. La solución propuesta, se sirve del uso de una pila de apoyo, donde se apilan los mínimos sucesivos.
+Por otra parte, la operación que presenta problemas en la obtención del resultado en complejidad O(1) es `peekMin`, ya que para lograrlo, no es posible iterar la estructura y comparar los valores. La solución propuesta, se sirve del uso de una pila de apoyo, donde se apilan los mínimos sucesivos.
