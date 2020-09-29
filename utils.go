@@ -7,7 +7,6 @@ import (
 
 // Push apila un item
 func Push(n int, s *Stack, wg *sync.WaitGroup) {
-	wg.Add(1)
 	defer wg.Done()
 
 	value, err := s.Push(n)
@@ -18,7 +17,6 @@ func Push(n int, s *Stack, wg *sync.WaitGroup) {
 
 // Pop desapila un item
 func Pop(s *Stack, wg *sync.WaitGroup) {
-	wg.Add(1)
 	defer wg.Done()
 
 	value, err := s.Pop()

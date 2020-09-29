@@ -25,8 +25,10 @@ func main() {
 	// Apilo y desapilo
 	count := len(items)
 	for i := 0; i < count; i++ {
+		wg.Add(1)
 		go Push(items[i], stack, &wg)
 		if i%2 == 0 {
+			wg.Add(1)
 			go Pop(stack, &wg)
 		}
 	}
